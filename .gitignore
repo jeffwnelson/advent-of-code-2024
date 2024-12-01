@@ -1,0 +1,5 @@
+input.txt
+.idea
+.DS_Store
+*.test
+go.work
