@@ -52,12 +52,12 @@ func isSafe(levels []int) bool {
 	for i := 1; i < len(levels); i++ {
 		current := levels[i]
 
-		// If we are decreasing, yet our previous number is smaller than our current number, that cannot be safe
+		// If we are decreasing and our previous number is smaller than our current number, that cannot be safe
 		if decreasing && previous < current {
 			return false
 		}
 
-		// If we are increasing, yet our previous number is larger than our current number, that cannot be safe
+		// If we are increasing and our previous number is larger than our current number, that cannot be safe
 		if !decreasing && previous > current {
 			return false
 		}
@@ -69,7 +69,7 @@ func isSafe(levels []int) bool {
 			return false
 		}
 
-		// Our comparison is still valid, move to next set
+		// Reset previous to current and go again.
 		previous = current
 	}
 	// All checks passed, levels are safe

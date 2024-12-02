@@ -12,7 +12,7 @@ func AbsInt(n int) int {
 	return n
 }
 
-// StringToInts Takes an array of strings and converts to a string of ints
+// StringToInts Takes an array of strings and converts to an array of ints
 func StringToInts(s []string) []int {
 	ints := make([]int, len(s))
 
