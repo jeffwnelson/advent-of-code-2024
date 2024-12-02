@@ -44,7 +44,7 @@ func isSafe(levels []int) bool {
 	}
 
 	// Our second level is higher than our first level, therefore we are increasing
-	if levels[1] > levels[0] {
+	if levels[0] < levels[1] {
 		decreasing = false
 	}
 
