@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-var file = "day03/input.txt"
+var file = "../input.txt"
 
 func TestPart1(t *testing.T) {
 	start := time.Now() // Record start time
