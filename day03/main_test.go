@@ -1,24 +1,32 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"testing"
+	"time"
 )
 
-func BenchmarkPart1(b *testing.B) {
-	input, _ := os.Open("day03/input.txt")
-	defer input.Close()
+var file = "day03/input.txt"
 
-	for i := 0; i < b.N; i++ {
-		part1(input)
-	}
+func TestPart1(t *testing.T) {
+	start := time.Now() // Record start time
+
+	input, _ := os.Open(file)
+	defer input.Close()
+	part1(input)
+
+	duration := time.Since(start) // Calculate the duration
+	fmt.Printf("Execution time: %d µs\n", duration.Microseconds())
 }
 
-func BenchmarkPart2(b *testing.B) {
-	input, _ := os.Open("day03/input.txt")
-	defer input.Close()
+func TestPart2(t *testing.T) {
+	start := time.Now() // Record start time
 
-	for i := 0; i < b.N; i++ {
-		part2(input)
-	}
+	input, _ := os.Open(file)
+	defer input.Close()
+	part2(input)
+
+	duration := time.Since(start) // Calculate the duration
+	fmt.Printf("Execution time: %d µs\n", duration.Microseconds())
 }
