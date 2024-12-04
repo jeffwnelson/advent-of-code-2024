@@ -63,14 +63,20 @@ func checkHorizontal(grid []string, x int, y int) int {
 
 	// Check forwards
 	if y <= (len(grid[0]) - 1 - 3) {
-		if grid[x][y] == byte('X') && grid[x][y+1] == byte('M') && grid[x][y+2] == byte('A') && grid[x][y+3] == byte('S') {
+		if grid[x][y] == byte('X') &&
+			grid[x][y+1] == byte('M') &&
+			grid[x][y+2] == byte('A') &&
+			grid[x][y+3] == byte('S') {
 			count++
 		}
 	}
 
 	// Check backwards
 	if y >= 3 {
-		if grid[x][y] == byte('X') && grid[x][y-1] == byte('M') && grid[x][y-2] == byte('A') && grid[x][y-3] == byte('S') {
+		if grid[x][y] == byte('X') &&
+			grid[x][y-1] == byte('M') &&
+			grid[x][y-2] == byte('A') &&
+			grid[x][y-3] == byte('S') {
 			count++
 		}
 	}
@@ -82,14 +88,20 @@ func checkVertical(grid []string, x int, y int) int {
 
 	// Check up
 	if x >= 3 {
-		if grid[x][y] == byte('X') && grid[x-1][y] == byte('M') && grid[x-2][y] == byte('A') && grid[x-3][y] == byte('S') {
+		if grid[x][y] == byte('X') &&
+			grid[x-1][y] == byte('M') &&
+			grid[x-2][y] == byte('A') &&
+			grid[x-3][y] == byte('S') {
 			count++
 		}
 	}
 
 	// Check down
 	if x <= (len(grid[0]) - 1 - 3) {
-		if grid[x][y] == byte('X') && grid[x+1][y] == byte('M') && grid[x+2][y] == byte('A') && grid[x+3][y] == byte('S') {
+		if grid[x][y] == byte('X') &&
+			grid[x+1][y] == byte('M') &&
+			grid[x+2][y] == byte('A') &&
+			grid[x+3][y] == byte('S') {
 			count++
 		}
 	}
